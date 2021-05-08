@@ -14,7 +14,7 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-int		*allocation_int(int nbr)
+int	*allocation_int(int nbr)
 {
 	int	*ptr;
 
@@ -27,7 +27,7 @@ int		*allocation_int(int nbr)
 
 void	ft_free_split(char **split)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (split[i])

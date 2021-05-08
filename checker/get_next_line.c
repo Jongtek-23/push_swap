@@ -47,7 +47,6 @@ int	ft_str_to_line(char **line, char **str)
 		return (1);
 	}
 	ft_free(str);
-	//free(tmp);
 	return (0);
 }
 

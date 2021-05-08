@@ -29,46 +29,45 @@ int	which_types(t_list **stack_a, t_list **stack_b, char *word)
 	return (1);
 }
 
-
-int    read_mots(t_list *hihi, t_list **stack_a, t_list **stack_b)
+int	read_mots(t_list *hihi, t_list **stack_a, t_list **stack_b)
 {
-    char    *str;
+	char	*str;
 
-    while (hihi)
-    {
-        str = (char *)hihi->content;
-        if (which_types(stack_a, stack_b, str) == 0)
-        {
-            printf("Error\n");
-            return (0);
-        }
-        hihi = hihi->next;
-    }
-    return (1);
+	while (hihi)
+	{
+		str = (char *)hihi->content;
+		if (which_types(stack_a, stack_b, str) == 0)
+		{
+			printf("Error\n");
+			return (0);
+		}
+		hihi = hihi->next;
+	}
+	return (1);
 }
 
 int	handling_types_bis(t_list **stack_a, t_list **stack_b, t_all *all)
 {
-    char *mot;
-    char *types;
+	char	*mot;
+	char	*types;
 
 	all->hihi = NULL;
 	while (get_next_line(0, &types) > 0)
-    {
-        mot = ft_strdup(types);
-        if (mot == NULL)
-            return (0);
-        ft_lstadd_back(&(all->hihi), ft_lstnew(mot));
-        free(types);
-    }
-    free(types);    
-    if (read_mots(all->hihi, stack_a, stack_b) == 0)
-    {
-        ft_lstclear(stack_a, free);
-        ft_lstclear(stack_b, free);
-        ft_lstclear(&(all->hihi), free);
-        return (0);
-    }
-    ft_lstclear(&(all->hihi), free);
-    return (1);
+	{
+		mot = ft_strdup(types);
+		if (mot == NULL)
+			return (0);
+		ft_lstadd_back(&(all->hihi), ft_lstnew(mot));
+		free(types);
+	}
+	free(types);
+	if (read_mots(all->hihi, stack_a, stack_b) == 0)
+	{
+		ft_lstclear(stack_a, free);
+		ft_lstclear(stack_b, free);
+		ft_lstclear(&(all->hihi), free);
+		return (0);
+	}
+	ft_lstclear(&(all->hihi), free);
+	return (1);
 }

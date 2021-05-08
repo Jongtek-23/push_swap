@@ -1,10 +1,10 @@
 #include "checker.h"
 
-int		with_2_argc(t_list **stack_a, int argc, char **argv)
+int	with_2_argc(t_list **stack_a, int argc, char **argv)
 {
-	int	*value;
-	char **split;
-	int	i;
+	int		*value;
+	char	**split;
+	int		i;
 
 	argv++;
 	i = 0;
@@ -23,7 +23,7 @@ int		with_2_argc(t_list **stack_a, int argc, char **argv)
 	return (1);
 }
 
-int		with_more_argc(t_list **stack_a, int argc, char **argv)
+int	with_more_argc(t_list **stack_a, int argc, char **argv)
 {
 	int		i;
 	int		*value;
@@ -41,7 +41,7 @@ int		with_more_argc(t_list **stack_a, int argc, char **argv)
 	return (1);
 }
 
-int		init(t_list **stack_a, int argc, char **argv)
+int	init(t_list **stack_a, int argc, char **argv)
 {
 	if (argc == 2)
 	{
@@ -70,7 +70,6 @@ int	main(int argc, char *argv[])
 		printf("OK\n");
 	else
 		printf("KO\n");
-    //view_of_stacks(all.stack_a, all.stack_b);
 	ft_lstclear(&(all.stack_a), free);
 	ft_lstclear(&(all.stack_b), free);
 	return (0);

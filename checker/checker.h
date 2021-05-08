@@ -11,16 +11,15 @@
 
 typedef struct s_all
 {
-    t_list  *stack_a;
-    t_list  *stack_b;
-    t_list  *str;
-    t_list  *hihi;
-}               t_all;
+	t_list	*stack_a;
+	t_list	*stack_b;
+	t_list	*str;
+	t_list	*hihi;
+}				t_all;
 
+int		handling_types_bis(t_list **stack_a, t_list **stack_b, t_all *all);
 
-int	handling_types_bis(t_list **stack_a, t_list **stack_b, t_all *all);
-
-int	check_sort_stack(t_list *stack_a, t_list *stack_b);
+int		check_sort_stack(t_list *stack_a, t_list *stack_b);
 
 void	push_a_to_b(t_list **from_a, t_list **to_b);
 void	push_b_to_a(t_list **from_b, t_list **to_a);
@@ -34,7 +33,7 @@ void	swap_2_first_a(t_list **stack);
 void	swap_2_first_b(t_list **stack);
 void	swap_2_first_a_b(t_list **stack_a, t_list **stack_b);
 
-int	ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2);
 int		*allocation_int(int nbr);
 void	ft_free_split(char **split);
 
