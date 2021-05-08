@@ -20,7 +20,7 @@
 
 static int	ft_lg_num(int n)
 {
-	int len;
+	int	len;
 
 	if (n == 0)
 		return (len = 1);
@@ -38,7 +38,7 @@ static int	ft_lg_num(int n)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	size_t	i;
@@ -46,7 +46,8 @@ char		*ft_itoa(int n)
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	i = ft_lg_num(n);
-	if (!(str = malloc(sizeof(char) * i + 1)))
+	str = malloc(sizeof(char) * i + 1);
+	if (!(str))
 		return (NULL);
 	str[i] = '\0';
 	i--;

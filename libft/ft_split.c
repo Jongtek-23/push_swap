@@ -57,7 +57,7 @@ static size_t	ft_lg_mot(const char *str, char c)
 	return (lg);
 }
 
-static void		*ft_free(char **tab)
+static void	*ft_free(char **tab)
 {
 	size_t	i;
 
@@ -71,7 +71,7 @@ static void		*ft_free(char **tab)
 	return (NULL);
 }
 
-static char		**ft_copie_mots(char **tab, const char *s, char c)
+static char	**ft_copie_mots(char **tab, const char *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -83,13 +83,13 @@ static char		**ft_copie_mots(char **tab, const char *s, char c)
 			s++;
 		if (*s != c && *s)
 		{
-			if (!(tab[i] = malloc(sizeof(char *) * (ft_lg_mot(s, c) + 1))))
+			tab[i] = malloc(sizeof(char *) * ft_lg_mot(s, c) + 1);
+			if (!(tab[i]))
 				return (ft_free(tab));
 			j = 0;
 			while (*s != c && *s)
 			{
-				tab[i][j] = *s;
-				j++;
+				tab[i][j++] = *s;
 				s++;
 			}
 			tab[i][j] = '\0';
@@ -100,7 +100,7 @@ static char		**ft_copie_mots(char **tab, const char *s, char c)
 	return (tab);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 

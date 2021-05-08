@@ -27,13 +27,14 @@ static int	ft_lg_uns(unsigned int n)
 	return (len);
 }
 
-char		*ft_itoa_uns(unsigned int n)
+char	*ft_itoa_uns(unsigned int n)
 {
 	char	*str;
 	size_t	i;
 
 	i = ft_lg_uns(n);
-	if (!(str = malloc(sizeof(char) * i + 1)))
+	str = malloc(sizeof(char) * i + 1);
+	if (!(str))
 		return (NULL);
 	str[i] = '\0';
 	i--;

@@ -46,7 +46,7 @@ static int	ft_possible_trimmer(char c, char const *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	debut;
@@ -64,7 +64,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 		fin--;
 	if (fin < debut)
 		fin = debut;
-	if (!(str = malloc(sizeof(char) * (fin - debut + 1))))
+	str = malloc(sizeof(char) * (fin - debut + 1));
+	if (!(str))
 		return (NULL);
 	while (debut < fin)
 		str[i++] = s1[debut++];

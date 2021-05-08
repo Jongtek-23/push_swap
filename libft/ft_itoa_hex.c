@@ -25,7 +25,8 @@ char	*ft_itoa_hex(unsigned int nb, int base)
 		tmp = tmp / base;
 		len++;
 	}
-	if (!(str = malloc(sizeof(char) * len + 1)))
+	str = malloc(sizeof(char) * len + 1);
+	if (!(str))
 		return (NULL);
 	str[len] = '\0';
 	while (len--)

@@ -25,15 +25,15 @@
 #include "libft.h"
 #include <limits.h>
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long int	res;
 	long int	sign;
 
 	res = 0;
 	sign = 1;
-	while (*str == '\t' || *str == '\n' || *str == '\v' ||
-				*str == '\f' || *str == '\r' || *str == ' ')
+	while (*str == '\t' || *str == '\n' || *str == '\v'
+		|| *str == '\f' || *str == '\r' || *str == ' ')
 		str++;
 	if (*str == '+' || *str == '-')
 	{

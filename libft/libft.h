@@ -19,7 +19,7 @@
 # include <limits.h>
 # include <unistd.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -50,7 +50,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strnstr(const char *haystack, const char *needle,
-								size_t len);
+						size_t len);
 int					ft_atoi(const char *str);
 char				*ft_strdup(const char *s);
 void				*ft_calloc(size_t nmemb, size_t size);
