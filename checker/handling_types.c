@@ -46,7 +46,7 @@ int	read_mots(t_list *hihi, t_list **stack_a, t_list **stack_b)
 	return (1);
 }
 
-int	handling_types_bis(t_list **stack_a, t_list **stack_b, t_all *all)
+int	handling_types(t_list **stack_a, t_list **stack_b, t_all *all)
 {
 	char	*mot;
 	char	*types;

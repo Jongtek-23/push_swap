@@ -62,9 +62,14 @@ int	main(int argc, char *argv[])
 	all.stack_b = NULL;
 	if (argc < 2)
 		return (0);
+	if (verif_values(argc, argv) == 0)
+	{
+		printf("Error\n");
+		return (0);
+	}
 	if (init(&(all.stack_a), argc, argv) == 0)
 		return (0);
-	if (handling_types_bis(&(all.stack_a), &(all.stack_b), &all) == 0)
+	if (handling_types(&(all.stack_a), &(all.stack_b), &all) == 0)
 		return (0);
 	if (check_sort_stack(all.stack_a, all.stack_b))
 		printf("OK\n");
