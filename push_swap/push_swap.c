@@ -54,16 +54,21 @@ int	init(t_list **stack_a, int argc, char **argv)
 	return (1);
 }
 
+void	init_values(t_all *all, int argc, char **argv)
+{
+	all->stack_a = NULL;
+	all->stack_b = NULL;
+	all->tmp_stack_a = NULL;
+	all->tmp_stack_b = NULL;
+	all->tmp_argc = argc;
+	all->tmp_argv = argv;
+}
+
 int	main(int argc, char *argv[])
 {
 	t_all	all;
 
-	all.stack_a = NULL;
-	all.stack_b = NULL;
-	all.tmp_stack_a = NULL;
-	all.tmp_stack_b = NULL;
-	all.tmp_argc = argc;
-	all.tmp_argv = argv;
+	init_values(&all, argc, argv);
 	if (argc < 2)
 		return (0);
 	if (verif_values(argc, argv) == 0)
@@ -77,7 +82,12 @@ int	main(int argc, char *argv[])
 		return (0);
 	if (get_new_stack(&(all.tmp_stack_a), argc, argv) == 0)
 		return (0);
-	push_swap_exec(&all.tmp_stack_a, &all.tmp_stack_b, &all);
+	if (push_swap_exec(&all.tmp_stack_a, &all.tmp_stack_b, &all) == 0)
+	{
+		ft_lstclear(&(all.tmp_stack_a), free);
+		ft_lstclear(&(all.stack_a), free);
+		return (0);
+	}
 	ft_lstclear(&(all.tmp_stack_a), free);
 	ft_lstclear(&(all.stack_a), free);
 	return (0);

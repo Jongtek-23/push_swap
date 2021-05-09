@@ -17,5 +17,7 @@ int	push_swap_exec(t_list **stack_a, t_list **stack_b, t_all *all)
 		if (p_s_100(stack_a, stack_b, all) == 0)
 			return (0);
 	}
+	if (len != 3 && len != 5 && len != 100)
+		trie_rapide(stack_a, stack_b, all);
 	return (1);
 }

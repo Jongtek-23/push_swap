@@ -76,6 +76,9 @@ int		get_new_stack(t_list **stack_a, int argc, char **argv);
 
 int		push_swap_exec(t_list **stack_a, t_list **stack_b, t_all *all);
 
+int	trie_rapide(t_list **stack_a, t_list **stack_b, t_all *all);
+int	petit_value(t_list *stack_a);
+
 void	p_s_3(t_list **stack_a, t_list **stack_b, int len);
 
 int		p_s_5(t_list **stack_a, t_list **stack_b, int len, t_all *all);
