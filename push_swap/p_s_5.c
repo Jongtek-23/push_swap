@@ -6,19 +6,19 @@ t_list	*p_s_3_for_5bis_2(t_list *tmp_a, int *n_1, int *n_2, int *n_3)
 
 	if (*n_1 > *n_2 && *n_2 < *n_3 && *n_3 < *n_1)
 	{
-		printf("ra\n");
+		ft_putendl_fd("ra", 1);
 		rotate_a(&tmp_a);
 	}
 	else if (*n_1 < *n_2 && *n_2 > *n_3 && *n_3 > *n_1)
 	{
-		printf("sa\n");
+		ft_putendl_fd("sa", 1);
 		swap_2_first_a(&tmp_a);
-		printf("ra\n");
+		ft_putendl_fd("ra", 1);
 		rotate_a(&tmp_a);
 	}
 	else if (*n_1 < *n_2 && *n_2 > *n_3 && *n_3 < *n_1)
 	{
-		printf("rra\n");
+		ft_putendl_fd("rra", 1);
 		rev_rotate_a(&tmp_a);
 	}
 	tmp_res = tmp_a;
@@ -34,15 +34,15 @@ t_list	*p_s_3_for_5bis(t_list *tmp_a, int *n_1, int *n_2, int *n_3)
 	tmp_res_2 = NULL;
 	if (*n_1 > *n_2 && *n_2 < *n_3 && *n_3 > *n_1)
 	{
-		printf("sa\n");
+		ft_putendl_fd("sa", 1);
 		swap_2_first_a(&tmp_a);
 		tmp_res = tmp_a;
 	}
 	else if (*n_1 > *n_2 && *n_2 > *n_3 && *n_3 < *n_1)
 	{
-		printf("sa\n");
+		ft_putendl_fd("sa", 1);
 		swap_2_first_a(&tmp_a);
-		printf("rra\n");
+		ft_putendl_fd("rra", 1);
 		rev_rotate_a(&tmp_a);
 		tmp_res = tmp_a;
 	}
@@ -84,7 +84,7 @@ t_list	*iterate_stack(t_list **tmp_a, t_list **tmp_b, int len, t_ps_5 *for_5)
 			break ;
 		if (*nbr == for_5->grand || *nbr == for_5->petit)
 		{
-			printf("pb\n");
+			ft_putendl_fd("pb", 1);
 			if (*tmp_b != NULL)
 				push_a_to_b(tmp_a, tmp_b);
 			else
@@ -93,7 +93,7 @@ t_list	*iterate_stack(t_list **tmp_a, t_list **tmp_b, int len, t_ps_5 *for_5)
 		}
 		else
 		{
-			printf("ra\n");
+			ft_putendl_fd("ra", 1);
 			rotate_a(tmp_a);
 		}
 		len--;

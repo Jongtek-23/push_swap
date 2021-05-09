@@ -73,7 +73,7 @@ int	main(int argc, char *argv[])
 		return (0);
 	if (verif_values(argc, argv, &all) == 0)
 	{
-		printf("Error\n");
+		ft_putendl_fd("Error", 1);
 		return (0);
 	}
 	if (init(&(all.stack_a), argc, argv) == 0)

@@ -62,7 +62,7 @@ void	trier_chunk_2_petit(t_all *all, t_list **stack_a, t_list **stack_b)
 		all->dist_top_stack_b_up = all->pos_in_stack_b - 1;
 		all->dist_top_stack_b_back = len_b - all->pos_in_stack_b + 1;
 		move_value_top_b(all, stack_b);
-		printf("pa\n");
+		ft_putendl_fd("pa", 1);
 		push_b_to_a(stack_b, stack_a);
 		all->boucle--;
 	}
@@ -86,7 +86,7 @@ void	trier_chunk_2_grand(t_all *all, t_list **stack_a, t_list **stack_b)
 		all->dist_top_stack_b_up = all->pos_in_stack_b - 1;
 		all->dist_top_stack_b_back = len_b - all->pos_in_stack_b + 1;
 		move_value_top_b(all, stack_b);
-		printf("pa\n");
+		ft_putendl_fd("pa", 1);
 		push_b_to_a(stack_b, stack_a);
 		all->boucle--;
 	}

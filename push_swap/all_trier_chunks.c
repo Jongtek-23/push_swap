@@ -6,7 +6,7 @@ void	move_value_top_b(t_all *all, t_list **stack_b)
 	{
 		while (all->dist_top_stack_b_up > 0)
 		{
-			printf("rb\n");
+			ft_putendl_fd("rb", 1);
 			rotate_b(stack_b);
 			all->dist_top_stack_b_up--;
 		}
@@ -15,7 +15,7 @@ void	move_value_top_b(t_all *all, t_list **stack_b)
 	{
 		while (all->dist_top_stack_b_back > 0)
 		{
-			printf("rrb\n");
+			ft_putendl_fd("rrb", 1);
 			rev_rotate_b(stack_b);
 			all->dist_top_stack_b_back--;
 		}

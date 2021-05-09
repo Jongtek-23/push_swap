@@ -106,7 +106,7 @@ int	which_near_top_4(t_all *all, t_list **stack_a, t_list **stack_b)
 		all->dist_to_top_up = all->pos_first - 1;
 		all->dist_to_top_back = all->size_stack - all->pos_second + 1;
 		dist_to_top(all, stack_a, stack_b);
-		printf("pb\n");
+		ft_putendl_fd("pb", 1);
 		push_a_to_b(stack_a, stack_b);
 		gerer_stack_b(stack_b, grand);
 	}

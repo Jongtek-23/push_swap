@@ -64,7 +64,7 @@ int	main(int argc, char *argv[])
 		return (0);
 	if (verif_values(argc, argv, &all) == 0)
 	{
-		printf("Error\n");
+		ft_putendl_fd("Error", 1);
 		return (0);
 	}
 	if (init(&(all.stack_a), argc, argv) == 0)
@@ -72,9 +72,9 @@ int	main(int argc, char *argv[])
 	if (handling_types(&(all.stack_a), &(all.stack_b), &all) == 0)
 		return (0);
 	if (check_sort_stack(all.stack_a, all.stack_b))
-		printf("OK\n");
+		ft_putendl_fd("OK", 1);
 	else
-		printf("KO\n");
+		ft_putendl_fd("KO", 1);
 	ft_lstclear(&(all.stack_a), free);
 	ft_lstclear(&(all.stack_b), free);
 	return (0);

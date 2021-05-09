@@ -6,7 +6,7 @@ void	dist_to_top(t_all *all, t_list **stack_a, t_list **stack_b)
 	{
 		while (all->dist_to_top_up > 0)
 		{
-			printf("ra\n");
+			ft_putendl_fd("ra", 1);
 			rotate_a(stack_a);
 			all->dist_to_top_up--;
 		}
@@ -15,7 +15,7 @@ void	dist_to_top(t_all *all, t_list **stack_a, t_list **stack_b)
 	{
 		while (all->dist_to_top_back > 0)
 		{
-			printf("rra\n");
+			ft_putendl_fd("rra", 1);
 			rev_rotate_a(stack_a);
 			all->dist_to_top_back--;
 		}
@@ -31,7 +31,7 @@ void	gerer_stack_b(t_list **stack_b, int grand)
 		nbr_b = (int *)(*stack_b)->content;
 		if (*nbr_b <= grand)
 		{
-			printf("rb\n");
+			ft_putendl_fd("rb", 1);
 			rotate_b(stack_b);
 		}
 	}

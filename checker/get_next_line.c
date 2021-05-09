@@ -12,10 +12,6 @@
 
 #include "get_next_line.h"
 
-/*
-** Il va free et va mettre NULL le pointeur
-*/
-
 void	ft_free(char **str)
 {
 	if (!str || !*str)
@@ -23,12 +19,6 @@ void	ft_free(char **str)
 	free(*str);
 	*str = NULL;
 }
-
-/*
-** Copie dans line ce qu'il y a dans str.
-** Copie la string des qu il trouve '\n' dans str.
-** Ce qui signifie qu'il y a encore une lecture.
-*/
 
 int	ft_str_to_line(char **line, char **str)
 {
@@ -50,10 +40,6 @@ int	ft_str_to_line(char **line, char **str)
 	return (0);
 }
 
-/*
-** Retourne la valeur de read()
-*/
-
 int	ft_value_of_return(char **line, char **str, int reader)
 {
 	if (reader < 0)
@@ -66,11 +52,6 @@ int	ft_value_of_return(char **line, char **str, int reader)
 	}
 	return (ft_str_to_line(line, str));
 }
-
-/*
-** read() lit jusqu'a BUFFER_SIZE octets depuis le file descriptor fd dans
-** le tampon pointe par buff.
-*/
 
 int	aide(int fd, char **line, char **str)
 {

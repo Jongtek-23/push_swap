@@ -12,11 +12,6 @@
 
 #include "get_next_line.h"
 
-/*
-** Calcule la longueur de la chaine de caracteres 's', sans compter '\0'.
-** Renvoie le nombre de caracteres dans la chaine 's'.
-*/
-
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
@@ -26,11 +21,6 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-
-/*
-** Renvoie un pointeur sur la 1er occurrence du caractere 'c' dans la chaine
-** 's', ou null si le caractere n'a pas ete trouve
-*/
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -45,14 +35,6 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (str);
 }
-
-/*
-** Renvoie un pointeur sur une nouvelle chaine de caracteres sui est
-** du^pliquee depuis s. La memoire occupee par cette nouvelle chaine est
-** obtenu en appelant malloc.
-** Renvoie un pointeur sur la chaine dupliquee, ou null s'il n'y a pas assez
-** de memoire.
-*/
 
 char	*ft_strdup(const char *s)
 {
@@ -74,14 +56,6 @@ char	*ft_strdup(const char *s)
 	str[i] = '\0';
 	return (str);
 }
-
-/*
- ** Alloue(avec malloc()) et retourne une nouvelle chaine, resultat de la
- ** cancatenation de s1 et s2.
- ** #1. La chaine de caracteres prefixe
- ** #2. La chaine de caracteres suffixe
- ** Retourne la nouvelle chaine de caracteres. NULL si l'allocation echoue.
- */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -110,16 +84,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-
-/*
-** Alloue(avec malloc()) et retourne une chaine de caracteres issue de la
-** chaine 's'. Cette nouvelle chaine commence a l'index 'start' et a pour
-** taille maximale 'len'.
-** #1. La chaine de laquelle extraire la nouvelle chaine
-** #2. L'index de debut de la nouvelle chaine dans la chaine 's'
-** #3. La taille maximale de la nouvelle chaine
-** Retourne la nouvelle chaine de caracteres. NULL si l'allocation echoue.
-*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

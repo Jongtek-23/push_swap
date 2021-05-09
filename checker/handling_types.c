@@ -38,7 +38,7 @@ int	read_mots(t_list *hihi, t_list **stack_a, t_list **stack_b)
 		str = (char *)hihi->content;
 		if (which_types(stack_a, stack_b, str) == 0)
 		{
-			printf("Error\n");
+			ft_putendl_fd("Error", 1);
 			return (0);
 		}
 		hihi = hihi->next;
