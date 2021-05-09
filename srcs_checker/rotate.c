@@ -1,6 +1,5 @@
 #include "../include/checker.h"
 
-
 void	rotate_a(t_list **stack_a)
 {
 	t_list	*tmp;
