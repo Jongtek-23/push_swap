@@ -1,4 +1,4 @@
-#include "checker.h"
+#include "push_swap.h"
 
 int check_more_argc(int argc, char **argv)
 {

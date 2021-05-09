@@ -57,9 +57,19 @@ int		init(t_list **stack_a, int argc, char **argv);
 int		with_2_argc(t_list **stack_a, int argc, char **argv);
 int		with_more_argc(t_list **stack_a, int argc, char **argv);
 
+int verif_values(int argc, char **argv);
+int ft_is_double_plus(int argc, char **argv);
+int check_more_argc(int argc, char **argv);
+int ft_is_double(int argc, char **argv);
+int ft_strlen_str(char **str);
+int check_2_argc(int argc, char **argv);
+int ft_is_integer(char *str);
+int ft_is_nbr(char *str);
+
 int		*allocation_int(int nbr);
 void	ft_free_split(char **split);
 void	ft_free_and_exit(t_list *stack, char **str);
+int	ft_strcmp(char *s1, char *s2);
 
 int		check_sort_stack_ps(t_list *stack_a, t_list *stack_b);
 int		get_new_stack(t_list **stack_a, int argc, char **argv);

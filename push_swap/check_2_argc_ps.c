@@ -1,4 +1,4 @@
-#include "checker.h"
+#include "push_swap.h"
 
 int ft_is_nbr(char *str)
 {

@@ -65,8 +65,10 @@ int	main(int argc, char *argv[])
 	all.tmp_argc = argc;
 	all.tmp_argv = argv;
 	if (argc < 2)
+		return (0);
+	if (verif_values(argc, argv) == 0)
 	{
-		printf("mierda\n");
+		printf("Error\n");
 		return (0);
 	}
 	if (init(&(all.stack_a), argc, argv) == 0)
