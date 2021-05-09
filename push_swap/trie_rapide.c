@@ -2,34 +2,29 @@
 
 int	trie_rapide(t_list **stack_a, t_list **stack_b, t_all *all)
 {
-	int	n;
-	int	*nbr;
-	int	*number;
-	int	nb_petit;
-
 	while (ft_lstsize(*stack_a) > 0)
 	{
 		if (check_sort_stack_ps(*stack_a, *stack_b))
 			return (1);
-		number = (int *)(*stack_a)->content;
-		nb_petit = petit_value(*stack_a);
-		if (*number == nb_petit)
+		all->number_trie = (int *)(*stack_a)->content;
+		all->nbr_petit_trie = petit_value(*stack_a);
+		if (*(all->number_trie) == all->nbr_petit_trie)
 		{
-			nbr = (int *)(*stack_a)->content;
+			all->nbr_trie = (int *)(*stack_a)->content;
 			push_a_to_b(stack_a, stack_b);
-            printf("pb\n");
+			printf("pb\n");
 		}
 		else
-        {
+		{
 			rotate_a(stack_a);
-            printf("ra\n");
-        }
-    }
-	n = ft_lstsize(*stack_b);
-	while (n-- > 0)
-    {
+			printf("ra\n");
+		}
+	}
+	all->n_trie = ft_lstsize(*stack_b);
+	while ((all->n_trie)-- > 0)
+	{
 		push_b_to_a(stack_b, stack_a);
-        printf("pa\n");
-    }
-    return (1);
+		printf("pa\n");
+	}
+	return (1);
 }

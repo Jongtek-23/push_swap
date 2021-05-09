@@ -15,18 +15,19 @@ typedef struct s_all
 	t_list	*stack_b;
 	t_list	*str;
 	t_list	*hihi;
+	int		len_is_double;
 }				t_all;
 
 int		handling_types(t_list **stack_a, t_list **stack_b, t_all *all);
 
 int		check_sort_stack(t_list *stack_a, t_list *stack_b);
 
-int verif_values(int argc, char **argv);
+int		verif_values(int argc, char **argv, t_all *all);
 
-int check_2_argc(int argc, char **argv);
-int ft_is_integer(char *str);
-int ft_is_nbr(char *str);
-int ft_is_double(int argc, char **argv);
+int		check_2_argc(int argc, char **argv);
+int		ft_is_integer(char *str);
+int		ft_is_nbr(char *str);
+int		ft_is_double(int argc, char **argv, t_all *all);
 
 void	push_a_to_b(t_list **from_a, t_list **to_b);
 void	push_b_to_a(t_list **from_b, t_list **to_a);

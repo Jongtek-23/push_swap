@@ -62,7 +62,7 @@ int	main(int argc, char *argv[])
 	all.stack_b = NULL;
 	if (argc < 2)
 		return (0);
-	if (verif_values(argc, argv) == 0)
+	if (verif_values(argc, argv, &all) == 0)
 	{
 		printf("Error\n");
 		return (0);
