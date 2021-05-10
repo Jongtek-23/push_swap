@@ -100,6 +100,7 @@ int	main(int argc, char *argv[])
 		ft_lstclear(&(all.stack_a), free);
 		return (0);
 	}
+	view_of_stacks(all.tmp_stack_a, all.tmp_stack_b);
 	ft_lstclear(&(all.tmp_stack_a), free);
 	ft_lstclear(&(all.stack_a), free);
 	return (0);

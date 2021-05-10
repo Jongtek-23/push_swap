@@ -45,7 +45,8 @@ FILES_P_S = push_swap.c all_chunk.c all_trier_chunks.c all_which_near_top.c \
 			near_top_500_9.c near_top_500_10.c near_top_500_11.c s_c_500_1.c \
 			s_c_500_11.c s_c_500_3_4.c s_c_500_5_6.c s_c_500_7_8.c s_c_500_9_10.c \
 			t_c_500_1.c t_c_500_2.c t_c_500_3.c t_c_500_4.c t_c_500_5.c \
-			t_c_500_6.c t_c_500_7.c t_c_500_8.c t_c_500_9.c t_c_500_10.c t_c_500_11.c
+			t_c_500_6.c t_c_500_7.c t_c_500_8.c t_c_500_9.c t_c_500_10.c t_c_500_11.c \
+			view_of_stacks.c
 
 SRCS_CHECKER = $(addprefix srcs_checker/, $(FILES_CHECKER))
 OBJS_CHECKER = $(SRCS_CHECKER:.c=.o)

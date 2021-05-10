@@ -215,4 +215,6 @@ void	swap_2_first_a(t_list **stack);
 void	swap_2_first_b(t_list **stack);
 void	swap_2_first_a_b(t_list **stack_a, t_list **stack_b);
 
+void	view_of_stacks(t_list *stack_a, t_list *stack_b);
+
 #endif
