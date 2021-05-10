@@ -22,7 +22,7 @@ int	all_chunks_500(t_all *all)
 		return (0);
 	if (s_c_500_10(all) == 0)
 		return (0);
-    if (s_c_500_11(all) == 0)
+	if (s_c_500_11(all) == 0)
 		return (0);
-    return (1);
+	return (1);
 }

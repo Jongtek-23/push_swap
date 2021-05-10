@@ -12,7 +12,7 @@ int	all_near_top_500(t_all *all, t_list **stack_a, t_list **stack_b)
 		return (0);
 	if (near_top_500_5(all, stack_a, stack_b) == 0)
 		return (0);
-    if (near_top_500_6(all, stack_a, stack_b) == 0)
+	if (near_top_500_6(all, stack_a, stack_b) == 0)
 		return (0);
 	if (near_top_500_7(all, stack_a, stack_b) == 0)
 		return (0);
@@ -22,7 +22,7 @@ int	all_near_top_500(t_all *all, t_list **stack_a, t_list **stack_b)
 		return (0);
 	if (near_top_500_10(all, stack_a, stack_b) == 0)
 		return (0);
-    if (near_top_500_11(all, stack_a, stack_b) == 0)
+	if (near_top_500_11(all, stack_a, stack_b) == 0)
 		return (0);
 	return (1);
 }

@@ -2,9 +2,9 @@
 
 void	all_trier_chunks_500(t_all *all, t_list **stack_a, t_list **stack_b)
 {
-    t_c_500_11_grand(all, stack_a, stack_b);
+	t_c_500_11_grand(all, stack_a, stack_b);
 	t_c_500_11_petit(all, stack_a, stack_b);
-    t_c_500_10_grand(all, stack_a, stack_b);
+	t_c_500_10_grand(all, stack_a, stack_b);
 	t_c_500_10_petit(all, stack_a, stack_b);
 	t_c_500_9_grand(all, stack_a, stack_b);
 	t_c_500_9_petit(all, stack_a, stack_b);

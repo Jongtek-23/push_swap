@@ -29,23 +29,23 @@ void	funct_bastard_500(t_all *all, t_list *tmp_a, t_list *tmp_b)
 	free(all->numbers);
 }
 
-int p_s_500(t_list **stack_a, t_list **stack_b, t_all *all)
+int	p_s_500(t_list **stack_a, t_list **stack_b, t_all *all)
 {
-  t_list  *tmp_a;
-  t_list  *tmp_b;
+	t_list	*tmp_a;
+	t_list	*tmp_b;
 
-  tmp_a = NULL;
-  tmp_b = NULL;
-  if (get_new_stack(&tmp_a, all->tmp_argc, all->tmp_argv) == 0)
-	  return (0);
-  stack_sort_out_100(&tmp_a, &tmp_b);
-  if (stack_trie_to_int_500(tmp_a, all) == 0)
-    return (0);
-  if (all_chunks_500(all) == 0)
-	  return (0);
+	tmp_a = NULL;
+	tmp_b = NULL;
+	if (get_new_stack(&tmp_a, all->tmp_argc, all->tmp_argv) == 0)
+		return (0);
+	stack_sort_out_100(&tmp_a, &tmp_b);
+	if (stack_trie_to_int_500(tmp_a, all) == 0)
+		return (0);
+	if (all_chunks_500(all) == 0)
+		return (0);
 	if (all_near_top_500(all, stack_a, stack_b) == 0)
-		  return (0);
-  all_trier_chunks_500(all, stack_a, stack_b);
+		return (0);
+	all_trier_chunks_500(all, stack_a, stack_b);
 	funct_bastard_500(all, tmp_a, tmp_b);
 	return (1);
 }
