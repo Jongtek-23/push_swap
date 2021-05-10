@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: focampo <focampo@student.s19.be>           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/05/10 10:49:45 by focampo           #+#    #+#              #
+#    Updated: 2021/05/10 10:49:47 by focampo          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CHECKER = checker
 PUSH_SWAP = push_swap
 NAME = $(CHECKER) $(PUSH_SWAP)
@@ -45,6 +57,6 @@ clean:
 	$(RM) $(OBJS_CHECKER) $(OBJS_P_S)
 
 fclean: clean
-	$(RM) $(NAME) $(LIBFT_A)	
+	$(RM) $(NAME) $(LIBFT_A)
 
 re: fclean clean
