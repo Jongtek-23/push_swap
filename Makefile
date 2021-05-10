@@ -38,7 +38,14 @@ FILES_P_S = push_swap.c all_chunk.c all_trier_chunks.c all_which_near_top.c \
 			stack_sort_out_100.c swap_first_2.c trie_rapide.c trier_chunk_1.c \
 			trier_chunk_2.c trier_chunk_3.c trier_chunk_4.c trier_chunk_5.c \
 			verif_values_ps.c which_near_top_1.c which_near_top_2.c \
-			which_near_top_3.c which_near_top_4.c which_near_top_5.c
+			which_near_top_3.c which_near_top_4.c which_near_top_5.c \
+			p_s_500.c all_chunk_500.c all_near_top_500.c all_trier_chunks_500.c \
+			near_top_500_1.c near_top_500_2.c near_top_500_3.c near_top_500_4.c \
+			near_top_500_5.c near_top_500_6.c near_top_500_7.c near_top_500_8.c \
+			near_top_500_9.c near_top_500_10.c near_top_500_11.c s_c_500_1.c \
+			s_c_500_11.c s_c_500_3_4.c s_c_500_5_6.c s_c_500_7_8.c s_c_500_9_10.c \
+			t_c_500_1.c t_c_500_2.c t_c_500_3.c t_c_500_4.c t_c_500_5.c \
+			t_c_500_6.c t_c_500_7.c t_c_500_8.c t_c_500_9.c t_c_500_10.c t_c_500_11.c
 
 SRCS_CHECKER = $(addprefix srcs_checker/, $(FILES_CHECKER))
 OBJS_CHECKER = $(SRCS_CHECKER:.c=.o)

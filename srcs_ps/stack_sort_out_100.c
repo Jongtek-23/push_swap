@@ -75,3 +75,25 @@ int	stack_trie_to_int(t_list *tmp_a, t_all *all)
 	}
 	return (1);
 }
+
+int	stack_trie_to_int_500(t_list *tmp_a, t_all *all)
+{
+	int	i;
+	int	len;
+	int	*nbr;
+
+	i = 0;
+	len = 500;
+	all->numbers = malloc(sizeof(int) * 500);
+	if (all->numbers == NULL)
+		return (0);
+	while (tmp_a && len > 0)
+	{
+		nbr = (int *)tmp_a->content;
+		(all->numbers)[i] = *nbr;
+		tmp_a = tmp_a->next;
+		len--;
+		i++;
+	}
+	return (1);
+}
